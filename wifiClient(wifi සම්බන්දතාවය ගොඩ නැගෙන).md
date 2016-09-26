@@ -18,7 +18,7 @@ int connect(const char* host, uint16_t port)
 int connect(IPAddress ip, uint16_t port)
 
 -Example :
-
+```sh
 WiFiClient client;
 
   const int httpPort = 80;
@@ -30,7 +30,7 @@ WiFiClient client;
     return;
     
   }
-
+```
 Connect to the given host at the given port using TCP. 
 
 This function returns 0 on a failure.
