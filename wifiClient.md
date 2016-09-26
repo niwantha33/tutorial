@@ -15,14 +15,23 @@ int connect(IPAddress ip, uint16_t port)
 -Example :
 
 WiFiClient client;
+
   const int httpPort = 80;
+  
   if (!client.connect(host, httpPort)) {
+  
     Serial.println("connection failed");
+    
     return;
+    
   }
 
-Connect to the given host at the given port using TCP. This function returns 0 on a failure.
+Connect to the given host at the given port using TCP. 
+
+This function returns 0 on a failure.
+
 WiFiClient.connected
+
 Determine if we are connected to a partner.
 uint8_t connected()
 Return true if connected and false otherwise.
