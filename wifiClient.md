@@ -1,3 +1,8 @@
+
+මෙම library එක මගින් wifi සම්බන්දතාවය ගොඩ නැගෙන අතර 
+
+එය හොස්ට්  සමග සම්බන්ද වනුඇත 
+
 #WiFiClient
 
 WiFiClient.available () : Return the amount of data available to be read.
@@ -33,47 +38,89 @@ This function returns 0 on a failure.
 WiFiClient.connected
 
 Determine if we are connected to a partner.
+
 uint8_t connected()
+
 Return true if connected and false otherwise.
-WiFiClient.flush
+
+###WiFiClient.flush
+
 void flush()
-WiFiClient.getNoDelay
+
+###WiFiClient.getNoDelay
+
 bool getNoDelay()
-WiFiClient.peek
+
+###WiFiClient.peek
+
 int peek()
-WiFiClient.read
+
+###WiFiClient.read
+
 Read data from the partner.
+
 int read()
+
 int read(uint8_t *buf, size_t size)
-Read data from the partner. These functions read either a single byte or a sequence of bytes from
-the partner.
-WiFiClient.remoteIP
+
+
+Read data from the partner. These functions read either a single byte or a sequence of bytes from the partner.
+
+###WiFiClient.remoteIP
+
 Retrieve the remote IP address of the connection.
+
 IPAddress remoteIP()
+
 Retrieve the remote IP address of the connection.
-Page 224WiFiClient.remotePort
+
+###WiFiClient.remotePort
+
 Return the remote port being used in an existing connection.
+
 uint16_t remotePort()
+
 Return the remote port being used in an existing connection.
-WiFiClient.setLocalPortStart
+
+###WiFiClient.setLocalPortStart
+
 Set the initial port for allocating local ports for connections.
+
 void setLocalPortStart(uint16_t port)
+
 Set the initial port for allocating local ports for connections.
-WiFiClient.setNoDelay
+
+###WiFiClient.setNoDelay
+
 void setNoDelay(bool nodelay)
+
 WiFiClient.status
+
 uint8_t status()
-WiFiClient.stop
+
+###WiFiClient.stop
+
 Disconnect a client.
+
 void stop()
+
 Disconnect a client.
-WiFiClient.stopAll
+
+###WiFiClient.stopAll
+
 Stop all the connections formed by this WiFi client.
+
 void stopAll()
-WiFiClient.write
+
+###WiFiClient.write
+
 Write data to the partner.
+
 size_t write(uint8_t b)
+
 size_t write(const uint8_t *buf, size_t size)
+
 size_t write(T& source, size_t unitSize);
+
 Write data to the partner. The first function writes one byte, while the second function writes an
 array of characters.
