@@ -1,0 +1,29 @@
+
+while (WiFi.status() != WL_CONNECTED)
+{
+  delay(500);
+  Serial.print(".");
+}
+
+Serial.setDebugOutput(true);
+
+
+wl_status_t ESP8266WiFiClass::status()
+{
+    int status = wifi_station_get_connect_status();
+
+    if (status == STATION_GOT_IP)
+      return WL_CONNECTED;
+      
+    else if (status == STATION_NO_AP_FOUND)
+      return WL_NO_SSID_AVAIL;
+      
+    else if (status == STATION_CONNECT_FAIL || status == STATION_WRONG_PASSWORD)
+      return WL_CONNECT_FAILED;
+      
+    else if (status == STATION_IDLE)
+      return WL_IDLE_STATUS;
+      
+    else
+      return WL_DISCONNECTED;
+}
